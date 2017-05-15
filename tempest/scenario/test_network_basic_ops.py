@@ -400,7 +400,8 @@ class TestNetworkBasicOps(manager.NetworkScenarioTest):
         self._disassociate_floating_ips()
         self.check_public_network_connectivity(should_connect=False,
                                                msg="after disassociate "
-                                                   "floating ip")
+                                                   "floating ip",
+                                               should_check_floating_ip_status=False)
         self._reassociate_floating_ips()
         self.check_public_network_connectivity(should_connect=True,
                                                msg="after re-associate "
