@@ -325,7 +325,8 @@ class TestNetworkBasicOps(manager.NetworkScenarioTest):
         self.assertEqual(1, len(v4_subnets),
                          "Found %d IPv4 subnets" % len(v4_subnets))
 
-        external_ips = [v4_subnets[0]['gateway_ip']]
+        #external_ips = [v4_subnets[0]['gateway_ip']]
+        external_ips = ['8.8.8.8']
         self._check_server_connectivity(self.floating_ip_tuple.floating_ip,
                                         external_ips)
 
