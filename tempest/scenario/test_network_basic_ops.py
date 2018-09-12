@@ -421,7 +421,7 @@ class TestNetworkBasicOps(manager.NetworkScenarioTest):
     @testtools.skipIf(CONF.network.shared_physical_network,
                       'Connectivity can only be tested when in a '
                       'multitenant network environment')
-    @decorators.skip_because(bug="1610994")
+    #@decorators.skip_because(bug="1610994")
     @test.services('compute', 'network')
     def test_connectivity_between_vms_on_different_networks(self):
         """Test connectivity between VMs on different networks
